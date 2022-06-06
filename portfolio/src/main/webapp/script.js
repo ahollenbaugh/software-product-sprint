@@ -13,16 +13,16 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Displays a random Napoleon Dynamite quote on the page.
  */
-function addRandomGreeting() {
-  const greetings =
+function getRandomQuote() {
+  const quote_list =
       ['How much you wanna bet I can throw a football over the mountains?', 'Grandma says you\'re ruining our lives and eating all our steak!', 'Your mom goes to college!', 'You\'re just jealous because I\'ve been chatting online with babes, all day.', 'I like your sleeves; they\'re real big.'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  // Pick a random quote.
+  const random_quote = quote_list[Math.floor(Math.random() * quote_list.length)];
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  // Display.
+  const quoteContainer = document.getElementById('quote-container');
+  quoteContainer.innerText = random_quote;
 }

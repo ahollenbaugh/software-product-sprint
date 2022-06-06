@@ -8,13 +8,13 @@
   width: 650px;
 }
 
-#greeting-container {
+#quote-container {
   margin-top: 20px;
-  font-family: Arial;
+  /* font-family: Arial; */
   color: chartreuse;
 }
 
-#img-selfie{
+#img-main{
     /* display: block;
     margin-left: auto;
     margin-right: auto; */
@@ -34,16 +34,5 @@ body{
     background-color: black;
     color: white;
     text-align: right;
-}
-
-h1{
-    font-family: Arial;
-}
-
-p{
-    font-family: Arial;
-}
-
-h4{
     font-family: Arial;
 }
