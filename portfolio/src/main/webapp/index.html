@@ -2,18 +2,37 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>allie's portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+      <h1 class="header">allie hollenbaugh</h1>
+      <img id="img-main" src="/images/selfie_compressed.jpeg"/>
+      <p>
+        computer science major at california state university, northridge
+        <br>
+        mediocre filmmaker 
+      </p>
+      
+      <h1 class="header">projects</h1>
+      <h4><b>relational database management system</b></h4>
+      <p>uses map and multimap data structures based on b+ trees, binary files for disk storage of database record data, text files for storing names of fields, tables, number of records and other information that needs to be remembered from session to session, and a state machine representing the sql-like grammar for command line interpretation.</p>
+      <h4><b>2d graphing calculator</b></h4>
+      <p>uses the shunting yard algorithm and stack and queue data structures built from scratch to parse mathematical functions given by the user. uses sfml to display graphs. the user can zoom in and out, and pan horizontally or vertically. supports trig, floor, ceiling, polynomial, rational, max, and absolute value functions.</p>
+      <h4><b>tweet index</b></h4>
+      <p>downloads all the tweets of a particular twitter account and uses the bucket sort algorithm to generate an alphabetized index of each word found.</p>
+      
+      <div id="extras-div">
+        <h1 class="header">extras</h1>
+        <p>check out my <a href="https://github.com/ahollenbaugh">github</a></p>
+        <p>click <a href="/hello">here</a> to see content created by server code.</p>
+        <p>click here to get a random message:</p>
+        <button onclick="getRandomQuote()">Hello</button>
+        <div id="quote-container"></div>
+      </div>
+      
     </div>
   </body>
 </html>

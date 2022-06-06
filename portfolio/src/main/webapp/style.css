@@ -1,9 +1,38 @@
+
+
+/* ID SELECTORS */
+
 #content {
   margin-left: auto;
   margin-right: auto;
   width: 650px;
 }
 
-#greeting-container {
+#quote-container {
   margin-top: 20px;
+  /* font-family: Arial; */
+  color: chartreuse;
+}
+
+#img-main{
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+    width: 30%;
+    height: 30%;
+}
+
+/* CLASS SELECTORS */
+
+.header{
+    background-color: red;
+}
+
+/* TYPE SELECTORS */
+
+body{
+    background-color: black;
+    color: white;
+    text-align: right;
+    font-family: Arial;
 }
