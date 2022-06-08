@@ -26,3 +26,13 @@ function getRandomQuote() {
   const quoteContainer = document.getElementById('quote-container');
   quoteContainer.innerText = random_quote;
 }
+
+/** Fetches hardcoded string from the server and adds it to the page. */
+async function showString() {
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.text();
+  
+    const stringContainer = document.getElementById('string-container');
+    stringContainer.innerText = textFromResponse;
+  }
+  
