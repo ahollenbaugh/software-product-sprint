@@ -28,11 +28,18 @@ function getRandomQuote() {
 }
 
 /** Fetches hardcoded string from the server and adds it to the page. */
-async function showString() {
+async function showRandomFact() {
+    // Fetch JSON from server
     const responseFromServer = await fetch('/hello');
-    const textFromResponse = await responseFromServer.text();
+
+    // Parse JSON
+    const facts = await responseFromServer.json();
+
+    // Pick a random fact
+    const random_fact = facts[Math.floor(Math.random() * facts.length)];
   
-    const stringContainer = document.getElementById('string-container');
-    stringContainer.innerText = textFromResponse;
+    // Display a random fact
+    const factContainer = document.getElementById('fact-container');
+    factContainer.innerText = random_fact;
   }
   
