@@ -24,7 +24,6 @@
       <p>uses the shunting yard algorithm and stack and queue data structures built from scratch to parse mathematical functions given by the user. uses sfml to display graphs. the user can zoom in and out, and pan horizontally or vertically. supports trig, floor, ceiling, polynomial, rational, max, and absolute value functions.</p>
       <h4><b>tweet index</b></h4>
       <p>downloads all the tweets of a particular twitter account and uses the bucket sort algorithm to generate an alphabetized index of each word found.</p>
-      
       <div id="extras-div">
         <h1 class="header">extras</h1>
         <p>check out my <a href="https://github.com/ahollenbaugh">github</a></p>
@@ -33,7 +32,19 @@
         <button onclick="getRandomQuote()">Hello</button>
         <div id="quote-container"></div>
       </div>
-      
+      <h1 class="header">contact</h1>
+      <form action="/form-handler" method="POST">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="message">Message:</label><br>
+        <textarea name="message"></textarea>
+        <br/>
+        <input type="submit" />
+      </form>
     </div>
   </body>
 </html>
