@@ -58,8 +58,8 @@ function requestTranslation() {
         method: 'POST',
         body: params
     }).then(response => response.text())
-        .then((translatedMessage) => {
-            resultContainer.innerText = translatedMessage;
+      .then((translatedMessage) => {
+          resultContainer.innerText = translatedMessage;
         });
 }
 
