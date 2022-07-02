@@ -16,15 +16,15 @@
  * Displays a random Napoleon Dynamite quote on the page.
  */
 function getRandomQuote() {
-  const quote_list =
-      ['How much you wanna bet I can throw a football over the mountains?', 'Grandma says you\'re ruining our lives and eating all our steak!', 'Your mom goes to college!', 'You\'re just jealous because I\'ve been chatting online with babes, all day.', 'I like your sleeves; they\'re real big.'];
+    const quote_list =
+        ['How much you wanna bet I can throw a football over the mountains?', 'Grandma says you\'re ruining our lives and eating all our steak!', 'Your mom goes to college!', 'You\'re just jealous because I\'ve been chatting online with babes, all day.', 'I like your sleeves; they\'re real big.'];
 
-  // Pick a random quote.
-  const random_quote = quote_list[Math.floor(Math.random() * quote_list.length)];
+    // Pick a random quote.
+    const random_quote = quote_list[Math.floor(Math.random() * quote_list.length)];
 
-  // Display.
-  const quoteContainer = document.getElementById('quote-container');
-  quoteContainer.innerText = random_quote;
+    // Display.
+    const quoteContainer = document.getElementById('quote-container');
+    quoteContainer.innerText = random_quote;
 }
 
 /** Fetches hardcoded string from the server and adds it to the page. */
@@ -37,9 +37,29 @@ async function showRandomFact() {
 
     // Pick a random fact
     const random_fact = facts[Math.floor(Math.random() * facts.length)];
-  
+
     // Display a random fact
     const factContainer = document.getElementById('fact-container');
     factContainer.innerText = random_fact;
-  }
-  
+}
+
+function requestTranslation() {
+    const text = document.getElementById('text').value;
+    const languageCode = document.getElementById('language').value;
+
+    const resultContainer = document.getElementById('result');
+    resultContainer.innerText = 'Loading...';
+
+    const params = new URLSearchParams();
+    params.append('text', text);
+    params.append('languageCode', languageCode);
+
+    fetch('/translate', {
+        method: 'POST',
+        body: params
+    }).then(response => response.text())
+      .then((translatedMessage) => {
+          resultContainer.innerText = translatedMessage;
+        });
+}
+
